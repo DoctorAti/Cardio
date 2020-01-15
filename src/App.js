@@ -1,5 +1,4 @@
 import React from 'react';
-import Joke from './Joke';
 import Introduction from './introduction';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
@@ -7,6 +6,7 @@ import Loginform from './components/loginform.js';
 // import '../css/buttons.css'
 // import '../css/misc.css'
 import Popup from 'reactjs-popup';
+import {Working} from './working.js'
 
 import { Jumbotron } from 'reactstrap';
 
@@ -14,10 +14,8 @@ import {
   Navbar,
   Nav,
   NavDropdown,
-  Form,
-  FormControl,
-  Button
 } from 'react-bootstrap';
+
 import './App.css';
 
 export default class App extends React.Component {
@@ -115,20 +113,14 @@ export default class App extends React.Component {
           <Loginform />
         </div>
 
+        
+
         <div id="photo2">
-          <Introduction />
+        <Working />
         </div>
 
         <div id="photo3">
-          <Jumbotron>
-            <h1 className="display-3">Joke Cards</h1>
-            <p className="lead">
-              Welcome to the next billion dollar app taking the world by storm
-            </p>
-            <hr className="my-2" />
-            <p>Prepare to be amused!</p>
-            <p className="lead"></p>
-          </Jumbotron>
+          <Introduction />
         </div>
 
         <div id="photo4">
@@ -143,6 +135,7 @@ export default class App extends React.Component {
           </Jumbotron>
         </div>
 
+
         <div id="photo5">
           <Jumbotron>
             <h1 className="display-3">Joke Cards</h1>
@@ -153,10 +146,8 @@ export default class App extends React.Component {
             <p>Prepare to be amused!</p>
             <p className="lead"></p>
           </Jumbotron>
-        </div>
-
-        <Joke />
-      </div>
+        </div>    
+   </div>
     );
   }
 }
