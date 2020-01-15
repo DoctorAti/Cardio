@@ -1,34 +1,21 @@
 import React from 'react';
 import Introduction from './introduction';
-<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Loginform from './components/loginform.js';
 // import '../css/buttons.css'
 // import '../css/misc.css'
 import Popup from 'reactjs-popup';
-=======
 import {Working} from './working.js'
-import Popup from "reactjs-popup";
->>>>>>> added how it works
 
 import { Jumbotron } from 'reactstrap';
 
 import {
-<<<<<<< HEAD
   Navbar,
   Nav,
   NavDropdown,
-  Form,
-  FormControl,
-  Button
 } from 'react-bootstrap';
-=======
-  Jumbotron
-} from 'reactstrap';
 
-import {Navbar, Nav, NavDropdown}  from 'react-bootstrap'
->>>>>>> added how it works
 import './App.css';
 
 export default class App extends React.Component {
@@ -126,21 +113,14 @@ export default class App extends React.Component {
           <Loginform />
         </div>
 
+        
+
         <div id="photo2">
-          <Introduction />
+        <Working />
         </div>
 
-<<<<<<< HEAD
         <div id="photo3">
-          <Jumbotron>
-            <h1 className="display-3">Joke Cards</h1>
-            <p className="lead">
-              Welcome to the next billion dollar app taking the world by storm
-            </p>
-            <hr className="my-2" />
-            <p>Prepare to be amused!</p>
-            <p className="lead"></p>
-          </Jumbotron>
+          <Introduction />
         </div>
 
         <div id="photo4">
@@ -154,22 +134,7 @@ export default class App extends React.Component {
             <p className="lead"></p>
           </Jumbotron>
         </div>
-=======
-<div id="photo2">
-        <Working />
-</div>
 
-<div id="photo3">
-         <Jumbotron>
-           <h1 className="display-3">Joke Cards</h1>
-           < p className="lead">Welcome to the next billion dollar app taking the world by storm</p>
-           <hr className="my-2" />
-           <p>Prepare to be amused!</p>
-             <p className="lead">
-           </p>
-         </Jumbotron>
-</div>
->>>>>>> added how it works
 
         <div id="photo5">
           <Jumbotron>
@@ -181,26 +146,8 @@ export default class App extends React.Component {
             <p>Prepare to be amused!</p>
             <p className="lead"></p>
           </Jumbotron>
-        </div>
-
-<<<<<<< HEAD
-        <Joke />
-      </div>
-=======
-<div id="photo5">
-         <Jumbotron>
-           <h1 className="display-3">Joke Cards</h1>
-           <p className="lead">Welcome to the next billion dollar app taking the world by storm</p>
-           <hr className="my-2" />
-           <p>Prepare to be amused!</p>
-             <p className="lead">
-           </p>
-         </Jumbotron>
-</div>
-        
-     
+        </div>    
    </div>
->>>>>>> added how it works
     );
   }
 }
