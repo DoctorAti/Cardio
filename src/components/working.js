@@ -14,6 +14,8 @@ import {
 
   import { Image, Button} from 'react-bootstrap';
 
+
+
 export class Working extends React.Component {
     constructor(props) {
         super(props);
@@ -92,7 +94,7 @@ class Work extends React.Component {
                 <Image src={imaginary} style={{height:"10vh", width:"10vh", textAlign:"centre" }} rounded/>
               </div>
               <div style={{color:'black'}}>
-                {setup}
+              o{setup}
               </div>
                       
               </Button>

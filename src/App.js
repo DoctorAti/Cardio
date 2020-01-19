@@ -18,9 +18,9 @@ export default class App extends React.Component {
       <div>
         <ContactModal />
         <NavigationBar />
-
+        
         <div id="introduction">
-          <Loginform />
+          <Introduction />
         </div>
 
         <div id="working">
@@ -29,6 +29,10 @@ export default class App extends React.Component {
 
         <div id="testimonial">
           <MyCarousel />
+        </div>
+
+        <div id="component3">
+           <Loginform /> 
         </div>
 
         <div id="component4">
