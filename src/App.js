@@ -3,13 +3,12 @@ import Introduction from './components/introduction';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Loginform from './components/loginform.js';
-import {Working} from './components/working.js'
-import NavigationBar from './components/navigationBar.js'
-import ContactModal from './components/contactModal.js'
+import { Working } from './components/working.js';
+import { MyCarousel } from './components/testimonial.js';
+import NavigationBar from './components/navigationBar.js';
+import ContactModal from './components/contactModal.js';
 
 import { Jumbotron } from 'reactstrap';
-
-
 
 import './App.css';
 
@@ -17,7 +16,6 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        
         <ContactModal />
         <NavigationBar />
 
@@ -26,11 +24,11 @@ export default class App extends React.Component {
         </div>
 
         <div id="working">
-        <Working />
+          <Working />
         </div>
 
-        <div id="component3">
-          <Introduction />
+        <div id="testimonial">
+          <MyCarousel />
         </div>
 
         <div id="component4">
@@ -45,7 +43,6 @@ export default class App extends React.Component {
           </Jumbotron>
         </div>
 
-
         <div id="component5">
           <Jumbotron>
             <h1 className="display-3">Joke Cards</h1>
@@ -56,8 +53,8 @@ export default class App extends React.Component {
             <p>Prepare to be amused!</p>
             <p className="lead"></p>
           </Jumbotron>
-        </div>    
-   </div>
+        </div>
+      </div>
     );
   }
 }
