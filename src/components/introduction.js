@@ -3,7 +3,7 @@ import {
     Jumbotron
   } from 'reactstrap';
   
-import './App.css';
+import '../App.css';
 
 export default class Introduction extends React.Component {
 

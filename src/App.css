@@ -29,7 +29,7 @@
 }
 
 .jumbotron {
-  background-image: url("Desktop-Doctor-Photos.jpg");
+  background-image: url("resources/Desktop-Doctor-Photos.jpg");
   background-color: #17234E;
   margin-bottom: 0;
   min-height: 50%;
@@ -37,6 +37,11 @@
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
+} 
+
+.Card {
+  height: 50;
+  width: 50;
 }
 
 @keyframes App-logo-spin {
