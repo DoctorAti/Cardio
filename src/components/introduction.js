@@ -8,7 +8,7 @@ import { Jumbotron } from 'reactstrap';
 import '../App.css';
 import { Image } from 'react-bootstrap';
 import Doctor from '../resources/onco_doctor.png'
-import MobileDoctor from '../resources/onco-doctor-small.jpg'
+import MobileDoctor from '../resources/jeet_doctor_mobile.jpg'
 import {
     BrowserView,
     MobileView,
