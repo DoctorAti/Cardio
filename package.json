@@ -13,14 +13,18 @@
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
+    "react-device-detect": "^1.11.14",
     "react-dom": "^16.12.0",
+    "react-items-carousel": "^2.8.0",
+    "react-responsive-image": "^5.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "reactjs-popup": "^1.5.0",
     "reactstrap": "^8.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=80 react-scripts start",
+    "start-pc": "set PORT=80&& react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
