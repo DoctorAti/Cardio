@@ -37,7 +37,7 @@ export default class ContactModal extends React.Component {
       }
 
     }
-    const request = new Request('http://localhost:8081/api/getintouch/', {
+    const request = new Request('localhost:8081/api/getintouch/', {
       method: 'POST',
       body: JSON.stringify({
         "firstName": this.state.name,
@@ -46,18 +46,14 @@ export default class ContactModal extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       }
-
     });
     const response = await fetch(request).
-      then(
-        function () {
-          alert('Your request submitted successfully');
-          console.log("maja aa gayaaaaa");
-        }
+      then(data => {
+        alert('Thanks for submitting your interest. Our customer exuecutives will reach out to you shortly');
+      }
       ).
       catch(function () {
-        alert('nahi hua')
-        console.log("siiiit");
+        alert('Sorry, your request can not be submitted. Please try after refreshing the page again.')
       });
     event.preventDefault();
   }
