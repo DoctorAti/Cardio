@@ -50,7 +50,7 @@ export class Working extends React.Component {
         let jokeCards = this.state.jokes.map(humor => {
             return (
               // <div className="">
-              <Col xs={6} sm={6} md={3} lg={3} xl={3} >
+              <Col xs={12} sm={12} md={3} lg={3} xl={3}  style={{marginTop: '2.5%', marginBottom: '2.5'}}>
                   <Work humor={humor} />
               </Col>
               // </div>
@@ -58,10 +58,10 @@ export class Working extends React.Component {
           });
 
           return (
-              <div>
-                <div id="HowItWorks" style={{textAlign: "center"}}>
+              <div  style={{margin: '7.5%'}} style={{textAlign: "center"}}>
+                <div id="HowItWorks" >
                     <h1>How It Works?</h1>
-                </div>
+                </div >
                 <Container fluid>
                 <Row>
                     {jokeCards}
@@ -89,12 +89,12 @@ class Work extends React.Component {
               data-toggle="modal"
               data-target="#myModal"
               class="btn btn-default" style={{backgroundColor:'#FFFFFF', borderColor:'white',}}>
-
-              <div class="container text-center">
+              
+              <div class="container text-center" style={{textAlign: 'center'}}>
                 <Image src={imaginary} style={{height:"10vh", width:"10vh", textAlign:"centre" }} rounded/>
               </div>
-              <div style={{color:'black'}}>
-              o{setup}
+              <div style={{color:'black', textAlign: 'center'}} >
+                {setup}
               </div>
                       
               </Button>
