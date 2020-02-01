@@ -7,7 +7,7 @@ import { Jumbotron } from 'reactstrap';
 
 import '../App.css';
 import { Image } from 'react-bootstrap';
-import Doctor from '../resources/onco_doctor.png'
+import Doctor from '../resources/jeet-doctor-laptop.png'
 import MobileDoctor from '../resources/jeet_doctor_mobile.jpg'
 import {
     BrowserView,
@@ -44,7 +44,7 @@ export default class Introduction extends React.Component {
             </div>
 
         }
-        return <Row>
+        return <Row style={{margin: '7.5%'}}> 
             <Col xs={6} sm={6} md={6} lg={6} xl={6}>
 
 
@@ -56,7 +56,7 @@ export default class Introduction extends React.Component {
                 </div>
             </Col>
             <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-                <Image src={Doctor} rounded alt="maja aa gaya" />
+                <Image src={Doctor} rounded alt="maja aa gaya" height="640"/>
             </Col>
 
         </Row>

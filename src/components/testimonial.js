@@ -1,8 +1,6 @@
 import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
-import rightArrow from '../resources/rightArrow.jpg';
-import panna from '../resources/panna.jpg';
 import { Image } from 'react-bootstrap';
 import Banda from '../resources/testimonial-carousel-1.jpg';
 
