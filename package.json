@@ -54,5 +54,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0"
   }
 }
