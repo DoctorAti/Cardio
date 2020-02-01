@@ -15,6 +15,7 @@ import Terms from './components/terms';
 import Services from './components/services';
 import Footer from './components/footer';
 import ScrollToTop from './components/ScrollToTop';
+import WorkingVideo from './components/workingVideo';
 
 export default class App extends React.Component {
   render() {
@@ -32,6 +33,7 @@ export default class App extends React.Component {
 
                 <div id="working">
                   <Working />
+                   <WorkingVideo />
                 </div>
 
                 <div id="testimonial">
