@@ -22,8 +22,6 @@ export default class Introduction extends React.Component {
         return (
             <div>
                 {this.renderIntrouction()}
-
-
             </div>
         );
     }
@@ -36,30 +34,36 @@ export default class Introduction extends React.Component {
                     <p style={{ lineHeight: '10px' }}><h3>Cardio is hard</h3></p>
                     <p style={{ lineHeight: '10px', color:'green' }}>We will help you beat it</p>
 
-                    <hr className="my-2" />
-                    <p>It uses utility classes for <br/>typography and spacing to <br/>space content out within the<br/> larger container.</p>
+                    <p style={{fontFamily: 'Justify'}}>Get a second opinion by <br/> world renowned team of <br/> cardiac specialist</p>
                     <p className="lead">
                     </p>
                 </Jumbotron>
             </div>
 
         }
-        return <Row style={{margin: '7.5%'}}> 
+        return (
+            <div style={{backgroundColor: '#ededed'}}>
+        <Row style={{ marginLeft: '7.5%', marginRight: '7.5%', }} > 
             <Col xs={6} sm={6} md={6} lg={6} xl={6}>
 
 
                 <div className="container">
-                    <h1 style={{ verticalAlign: 'text-bottom', paddingTop: '20%', paddingLeft: '20%' , textAlign:'middle'}} > Your heart is priceless.<br /> We will help you beat it</h1>
-                    <h4>
-                        Cardio Health.com helps you with all of your Cardiac problems. Cardiology diagnosis and treatment options available at your fingertips.
-                    </h4>
+                    <div  style={{ verticalAlign: 'text-bottom', paddingTop: '15%', paddingLeft: '17.5%' , textAlign:'middle', fontFamily: 'Verdana', fontSize: '180%', color: '#228b22'}} > 
+                          <span style={{color:'#ff8c00', fontWeight: 'bolder'}}>Cardio-health</span> helps you to
+                          <br /> 
+                          Fight all your <span style={{color:'#ff8c00', fontWeight: 'bolder'}}>cardio</span> problems
+                    </div>
+                    <div  style={{ verticalAlign: 'text-bottom', paddingTop: '5%', paddingLeft: '17.5%' , textAlign:'middle', fontFamily: 'Verdana', fontSize: '130%'}} > 
+                          Get a second opinion by a world renowned team of cardiac specialist
+                    </div>
                 </div>
             </Col>
-            <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-                <Image src={Doctor} rounded alt="maja aa gaya" height="640"/>
+            <Col xs={6} sm={6} md={6} lg={6} xl={6} style={{marginLeft: '-15%'}}>
+                <Image src={Doctor} rounded alt="maja aa gaya" height="640" textAlign='left'/>
             </Col>
-
         </Row>
+        </div>
+        )
     }
 
 };

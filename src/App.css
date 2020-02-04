@@ -44,6 +44,30 @@
   width: 50;
 }
 
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  min-height: 300px;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.testimonial-image {
+  position: relative;
+  margin-bottom: 10px;
+  top: -50px;
+  left: calc(50% - 50px);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.testimonial-content {
+  font-size: 23px;
+  font-weight: 300;
+  text-align: center;
+}
 
 @keyframes App-logo-spin {
   from {

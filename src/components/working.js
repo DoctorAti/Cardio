@@ -58,7 +58,7 @@ export class Working extends React.Component {
           });
 
           return (
-              <div  style={{margin: '7.5%'}} style={{textAlign: "center"}}>
+              <div  style={{margin: '7.5%', textAlign: 'center'}}>
                 <div id="HowItWorks" >
                     <h1>How It Works?</h1>
                 </div >
