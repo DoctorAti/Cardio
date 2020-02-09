@@ -19,7 +19,7 @@ export default class NavigationBar extends React.Component {
               <Nav.Link href="#introduction" style={{color: '#ffffff', fontWeight: 'bold', fontSize: 'larger'}}>Introduction</Nav.Link>
               <Nav.Link href="#working" style={{color: '#ffffff', fontWeight: 'bold', fontSize: 'larger'}}>Working</Nav.Link>
               <Nav.Link href="#testimonial" style={{color: '#ffffff', fontWeight: 'bold', fontSize: 'larger'}}>Testimonial</Nav.Link>
-              <Nav.Link href="#component4" style={{color: '#ffffff', fontWeight: 'bold', fontSize: 'larger'}}>Component4</Nav.Link>
+              <Nav.Link href="#ourDoctors" style={{color: '#ffffff', fontWeight: 'bold', fontSize: 'larger'}}>Our Doctors</Nav.Link>
               <Nav.Link href="#component5" style={{color: '#ffffff', fontWeight: 'bold', fontSize: 'larger'}}>Component5</Nav.Link>
             </Nav>
             {/* <!-- Trigger the modal with a button --> */}
