@@ -6,6 +6,8 @@ import { Working } from './components/working.js';
 import { MyCarousel } from './components/testimonial.js';
 import NavigationBar from './components/navigationBar.js';
 import ContactModal from './components/contactModal.js';
+import {DoctorCarousel} from './components/doctors.js';
+import Products from './components/products.js'
 
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -14,6 +16,8 @@ import Services from './components/services';
 import Footer from './components/footer';
 import ScrollToTop from './components/ScrollToTop';
 import WorkingVideo from './components/workingVideo';
+
+
 
 export default class App extends React.Component {
   render() {
@@ -34,11 +38,17 @@ export default class App extends React.Component {
                    <WorkingVideo />
                 </div>
 
+                <div id="products">
+                  <Products />
+                </div>
+
                 <div id="testimonial">
                   <MyCarousel />
                 </div>
 
-                
+                <div id="ourDoctors">
+                  <DoctorCarousel />
+                </div>
               </Route>
               <Route exact path="/terms-and-conditions">
                 <Terms />
