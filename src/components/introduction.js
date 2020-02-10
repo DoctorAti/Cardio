@@ -3,8 +3,9 @@ import { Row, Col } from 'reactstrap';
 import { Jumbotron } from 'reactstrap';
 import '../App.css';
 import { Image } from 'react-bootstrap';
-import Doctor from '../resources/frontpic.png'
-import MobileDoctor from '../resources/jeet_doctor_mobile.jpg'
+import Doctor from '../resources/jeet-doctor-laptop.png';
+import MobileDoctor from '../resources/jeet_doctor_mobile.jpg';
+import Doc from '../resources/doc2.png';
 import {
   BrowserView,
   MobileView,
