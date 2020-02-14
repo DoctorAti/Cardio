@@ -81,9 +81,12 @@ export default class Introduction extends React.Component {
             >
               <img src={Doc}></img>
             </Col>
-            <Introfrom></Introfrom>
+            <Introfrom style={{ backgroundColor: '#FFFF00' }}></Introfrom>
           </div>
         </div>
+        <br />
+        <br />
+        <br />
       </div>
     );
   }

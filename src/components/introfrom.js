@@ -11,7 +11,14 @@ class introfrom extends Component {
   }
   render() {
     return (
-      <Col xs={12} sm={12} md={4} lg={4} xl={4}>
+      <Col
+        xs={12}
+        sm={12}
+        md={4}
+        lg={4}
+        xl={4}
+        style={{ backgroundColor: 'FFFF00' }}
+      >
         <div className="container">
           <br></br>
           <form>
@@ -21,7 +28,6 @@ class introfrom extends Component {
                 class="form-control"
                 id="validationDefault01"
                 placeholder="Your Name"
-                required
               />
             </div>
             <div class="form-row mb-3">
@@ -30,7 +36,6 @@ class introfrom extends Component {
                 class="form-control"
                 id="validationDefault01"
                 placeholder="Email"
-                required
               />
             </div>
             <div class="form-row mb-3">
