@@ -1,10 +1,6 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-
-import { Jumbotron } from 'reactstrap';
-
 import '../App.css';
-
+import { PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
 export default class ContactModal extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +25,7 @@ export default class ContactModal extends React.Component {
         'Access-Control-Allow-Origin': '*'
       }
     };
-    const request = new Request('http://localhost:8081/api/getintouch/', {
+    const request = new Request('http://104.198.205.181:8081/api/getintouch/', {
       method: 'POST',
       body: JSON.stringify({
         firstName: this.state.name,
@@ -95,7 +91,7 @@ export default class ContactModal extends React.Component {
                     type="text"
                     class="form-control"
                     id="recipient-name"
-                    placeholder="Name"
+                    placeholder="Your Name"
                   />
                 </div>
                 <div class="form-group">
@@ -107,7 +103,7 @@ export default class ContactModal extends React.Component {
                     type="tel"
                     class="form-control"
                     id="message-text"
-                    placeholder="Mobile No. "
+                    placeholder="Mobile Number"
                   ></input>
                 </div>
               </div>
@@ -119,8 +115,12 @@ export default class ContactModal extends React.Component {
                 >
                   Close
                 </button>
-
-                <input type="submit" value="Submit" />
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-primary"
+                  style={{ backgroundColor: '#0071E3' }}
+                />
               </div>
             </form>
           </div>

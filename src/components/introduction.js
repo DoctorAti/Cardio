@@ -79,7 +79,7 @@ export default class Introduction extends React.Component {
               xl={4}
               style={{ backgroundImage: `url()` }}
             >
-              <img src={Doc}></img>
+              <img src=""></img>
             </Col>
             <Introfrom style={{ backgroundColor: '#FFFF00' }}></Introfrom>
           </div>
