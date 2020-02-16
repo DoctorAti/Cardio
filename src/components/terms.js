@@ -12,9 +12,9 @@ class terms extends Component {
           Guidelines) Rules, 2011 that requires the publication of Terms of Use
           and Privacy Policy for access or usage of a website. This Terms of Use
           agreement (the "Agreement") governs your use of this website
-          www.xxxx.com as well as email communications received on info@xxx.com,
-          casehistory@xxxx.com and cases@xxxx.com and text messages received on
-          +91 XXXXX XXXXX (collectively, the "Platform").
+          www.cardio-health.in as well as email communications received on
+          info@cardio-health.in , casehistory@cardio-health.in and
+          help@cardio-health.in collectively, the "Platform").
         </p>
 
         <h6>1. TERMS</h6>
@@ -46,7 +46,7 @@ class terms extends Component {
           <br />
           <strong>Our Services</strong>
           <br />
-          Under this Service, specialized cardiologist registered on the
+          Under this Service, specialized cardologists registered on the
           Company’s network provide written secondary medical opinions to
           Patients based on the medical / treatment reports and information that
           is submitted by them on the Platform.
@@ -54,7 +54,7 @@ class terms extends Component {
           The secondary medical opinion obtained via the Platform is only
           intended to be an ancillary opinion of a specialist, and shall not be
           treated as a consultation rendered by the concerned cardiologist. It
-          is not a substitute to regular treatment.
+          is not a substitute for regular treatment.
           <br />
           <br />
           <h6>3. Representations</h6>
@@ -204,7 +204,9 @@ class terms extends Component {
           Notice to User:
           <br />
           At the email address provided by you at the time of registration on
-          the Platform.
+          the Platform. The pictures and names used are for representative uses
+          only and may not represent a real or fictitious person. Any
+          resemblance is merely coincidence.
           <br />
           <br />
           Governing Law; Jurisdiction. This Agreement is governed by the
@@ -242,18 +244,19 @@ class terms extends Component {
           User or his / her representative shall be recorded by the Company for
           quality, training and internal record purposes.
           <br />
-          <br />I realize, acknowledge and expressly authorize XXXX.com to make
-          the initial communication (via Call / SMS / Email/WhatsApp) for the
-          purposes of confirmation of my credentials provided by me. I hereby
-          authorize Onco.com and its business associates to continue contacting
-          me via any of the modes of communication listed above, till such time
-          as I expressly opt-out / unsubscribe from the service offered by
-          Onco.com. Till such time, XXXX.com and its business associates shall
-          have all rights to continue communicating with me and I shall
-          completely indemnify them against any liability that may arise as a
-          result of such authorization to communicate. Such indemnification
-          shall extend to court cases and suits and all lawyer/advocate fees,
-          even if the dispute is never subjected to judicial scrutiny.
+          <br />I realize, acknowledge and expressly authorize cardio-health.in
+          to make the initial communication (via Call / SMS / Email/WhatsApp)
+          for the purposes of confirmation of my credentials provided by me. I
+          hereby authorize cardio-health.in and its business associates to
+          continue contacting me via any of the modes of communication listed
+          above, till such time as I expressly opt-out / unsubscribe from the
+          service offered by cardio-health.in. Till such time, cardio-health.in
+          and its business associates shall have all rights to continue
+          communicating with me and I shall completely indemnify them against
+          any liability that may arise as a result of such authorization to
+          communicate. Such indemnification shall extend to court cases and
+          suits and all lawyer/advocate fees, even if the dispute is never
+          subjected to judicial scrutiny.
         </p>
         <br />
         <br />

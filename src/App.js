@@ -6,8 +6,8 @@ import { Working } from './components/working.js';
 import { MyCarousel } from './components/testimonial.js';
 import NavigationBar from './components/navigationBar.js';
 import ContactModal from './components/contactModal.js';
-import {DoctorCarousel} from './components/doctors.js';
-import Products from './components/products.js'
+import { DoctorCarousel } from './components/doctors.js';
+import Products from './components/products.js';
 
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -18,9 +18,10 @@ import ScrollToTop from './components/ScrollToTop';
 import WorkingVideo from './components/workingVideo';
 
 import ReactGA from 'react-ga';
+import Advertisment from './components/advertisment';
 //import auth from './auth.ts'; // Sample authentication provider
 
-const trackingId = "UA-158622598-1"; // Replace with your Google Analytics tracking ID
+const trackingId = 'UA-158622598-1'; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
 // ReactGA.set({
 //   userId: auth.currentUserId(),
@@ -45,13 +46,13 @@ export default class App extends React.Component {
                 <div id="products">
                   <Products />
                 </div>
-
+                <div id="advertisment">
+                  <Advertisment />
+                </div>
                 <div id="working">
                   <Working />
-                   <WorkingVideo />
+                  <WorkingVideo />
                 </div>
-
-                
 
                 <div id="testimonial">
                   <MyCarousel />
