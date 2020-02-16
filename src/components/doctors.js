@@ -2,9 +2,8 @@ import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
 import cardioLogist1 from '../resources/cardiologist 1.jpg';
-import cardioLogist2 from '../resources/cardiologist 2.jpg';
+import cardioLogist2 from '../resources/cardiologist 2.jpeg';
 import cardioLogist3 from '../resources/cardiologist 3.jpg';
-import cardioLogist4 from '../resources/cardiologist 4.jpg';
 import cardioLogist5 from '../resources/cardiologist 5.jpg';
 import PropTypes from "prop-types";
 
