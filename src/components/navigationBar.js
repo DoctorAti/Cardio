@@ -62,7 +62,18 @@ export default class NavigationBar extends React.Component {
                   fontFamily: 'Helvetica'
                 }}
               >
-                Introduction
+                Home
+              </Nav.Link>
+              <Nav.Link
+                href="#products"
+                style={{
+                  color: '#ffffff',
+                  fontWeight: 'bold',
+                  fontSize: 'larger',
+                  fontFamily: 'Helvetica'
+                }}
+              >
+                Our Services
               </Nav.Link>
               <Nav.Link
                 href="#working"
@@ -73,7 +84,7 @@ export default class NavigationBar extends React.Component {
                   fontFamily: 'Helvetica'
                 }}
               >
-                Working
+                How it Works
               </Nav.Link>
               <Nav.Link
                 href="#testimonial"
@@ -97,17 +108,7 @@ export default class NavigationBar extends React.Component {
               >
                 Our Doctors
               </Nav.Link>
-              <Nav.Link
-                href="#component5"
-                style={{
-                  color: '#ffffff',
-                  fontWeight: 'bold',
-                  fontSize: 'larger',
-                  fontFamily: 'Helvetica'
-                }}
-              >
-                Component5
-              </Nav.Link>
+              
             </Nav>
             {/* <!-- Trigger the modal with a button --> */}
             <button
