@@ -29,14 +29,14 @@ export default class Introduction extends React.Component {
     renderIntrouction = () => {
         if (isMobile) {
             return <div>
-                <Jumbotron style={{ background: { MobileDoctor } }}>
+                <Jumbotron style={{ background: { MobileDoctor }, fontFamily:'helvetica' }}>
+                    <span><h3 style={{marginBottom:'0px', color:'#009bd6', fontWeight: 'bolder'}}>Undergoing a</h3></span>
+                    <span ><h3 style={{marginTop:'0px', color:'#009bd6', fontWeight: 'bolder'}}>Heart treatment?</h3></span>
 
-                    <p style={{ lineHeight: '10px' }}><h3>Cardio is hard</h3></p>
-                    <p style={{ lineHeight: '10px', color:'green' }}>We will help you beat it</p>
-
-                    <p style={{fontFamily: 'Justify'}}>Get a second opinion by <br/> world renowned team of <br/> cardiac specialist</p>
-                    <p className="lead">
-                    </p>
+                    <div style={{marginTop: '10%'}}>
+                    <span style={{fontFamily: 'helvetica'}}>Get a second opinion <br/> by  World renowned team <br/> of  Cardiac Specialist</span>
+                    </div>
+            
                 </Jumbotron>
             </div>
 
