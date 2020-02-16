@@ -59,7 +59,7 @@ export default class NavigationBar extends React.Component {
                   color: '#ffffff',
                   fontWeight: 'bold',
                   fontSize: 'larger',
-                  fontFamily: 'HelveticaNeue'
+                  fontFamily: 'Helvetica'
                 }}
               >
                 Introduction
@@ -70,7 +70,7 @@ export default class NavigationBar extends React.Component {
                   color: '#ffffff',
                   fontWeight: 'bold',
                   fontSize: 'larger',
-                  fontFamily: 'HelveticaNeue'
+                  fontFamily: 'Helvetica'
                 }}
               >
                 Working
@@ -81,7 +81,7 @@ export default class NavigationBar extends React.Component {
                   color: '#ffffff',
                   fontWeight: 'bold',
                   fontSize: 'larger',
-                  fontFamily: 'HelveticaNeue'
+                  fontFamily: 'Helvetica'
                 }}
               >
                 Testimonial
@@ -92,7 +92,7 @@ export default class NavigationBar extends React.Component {
                   color: '#ffffff',
                   fontWeight: 'bold',
                   fontSize: 'larger',
-                  fontFamily: 'HelveticaNeue'
+                  fontFamily: 'Helvetica'
                 }}
               >
                 Our Doctors
@@ -103,7 +103,7 @@ export default class NavigationBar extends React.Component {
                   color: '#ffffff',
                   fontWeight: 'bold',
                   fontSize: 'larger',
-                  fontFamily: 'HelveticaNeue'
+                  fontFamily: 'Helvetica'
                 }}
               >
                 Component5

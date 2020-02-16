@@ -41,7 +41,7 @@ export default class Introduction extends React.Component {
             <Jumbotron
               style={{
                 background: { MobileDoctor },
-                fontFamily: 'helveticaNeue',
+                fontFamily: 'helvetica',
                 alignItems: 'center'
               }}
             >
@@ -68,7 +68,7 @@ export default class Introduction extends React.Component {
                 </h3>
               </span>
               <div style={{ marginTop: '10%' }}>
-                <span style={{ fontFamily: 'helveticaNeue', color: 'black' }}>
+                <span style={{ fontFamily: 'helvetica', color: 'black' }}>
                   Get a second opinion <br /> by World renowned team <br /> of
                   Cardiac Specialist
                 </span>
@@ -89,7 +89,7 @@ export default class Introduction extends React.Component {
                 paddingTop: '20%',
                 paddingLeft: '%',
                 textAlign: 'middle',
-                fontFamily: 'helveticaNeue',
+                fontFamily: 'helvetica',
                 fontSize: '180%',
                 color: '#228b22'
               }}
@@ -121,7 +121,7 @@ export default class Introduction extends React.Component {
               <div
                 style={{ marginTop: '10%', fontSize: '40px', color: 'black' }}
               >
-                <span style={{ fontFamily: 'helveticaNeue' }}>
+                <span style={{ fontFamily: 'helvetica' }}>
                   Get a second opinion <br /> by World renowned team <br /> of
                   Cardiac Specialist
                 </span>

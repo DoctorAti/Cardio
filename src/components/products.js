@@ -81,7 +81,7 @@ export default class Products extends React.Component {
             fontSize: '180%'
           }}
         >
-          <span>Facing challenges with existing treatment?</span>
+          <span>Facing challenges with existing heart treatment?</span>
         </div>
         <div
           className="body"
