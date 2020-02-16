@@ -19,15 +19,15 @@ import WorkingVideo from './components/workingVideo';
 
 import ReactGA from 'react-ga';
 import Advertisment from './components/advertisment';
-//import auth from './auth.ts'; // Sample authentication provider
+// import auth from './auth.ts'; // Sample authentication provider
 
 const trackingId = 'UA-158622598-1'; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
-// ReactGA.set({
-//   userId: auth.currentUserId(),
-//   // any data that is relevant to the user session
-//   // that you would like to track with google analytics
-// })
+ReactGA.set({
+  // userId: auth.currentUserId(),
+  // any data that is relevant to the user session
+  // that you would like to track with google analytics
+})
 
 export default class App extends React.Component {
   render() {
