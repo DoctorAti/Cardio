@@ -121,7 +121,7 @@ export default class NavigationBar extends React.Component {
                 alignItems: 'center'
               }}
             >
-              <h6 style={{ marginBottom: '0px' }}>Contact Us</h6>
+              <h6 style={{ marginBottom: '0px' }}>Get Treatment</h6>
             </button>
           </Navbar.Collapse>
         </Navbar>
