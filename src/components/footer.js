@@ -49,7 +49,7 @@ class footer extends Component {
                     style={{ textAlign: 'center', alignItems: 'center' }}
                   >
                     <Col className="col" xs={12} sm={12} md={6} lg={6} xl={6}>
-                      <a href="mailto:abc@example.com">
+                      <a href="mailto:help@cardio-health.in">
                         <img src={mail} width="30%" alt="logo"></img>
                       </a>
                     </Col>
@@ -57,10 +57,10 @@ class footer extends Component {
                       <h6>Write to us</h6>
                       <h6>
                         <a
-                          href="mailto:abc@example.com"
+                          href="mailto:help@cardio-health.in"
                           style={{ color: 'white' }}
                         >
-                          abc@example.com
+                          help@cardio-health.in
                         </a>
                       </h6>
                     </Col>
@@ -99,11 +99,10 @@ class footer extends Component {
             <Col className="col" xs={12} sm={12} md={6} lg={6} xl={6}>
               <h5>Find Us</h5>
               <p>
-                Onco.com, #163/A, 9th Main, Sector 6, HSR Layout, Bengaluru,
-                Karnataka – 560 102
+                Cardio-health.in, Embassy Golf Links (EGL) Off Intermediate Ring Road Bengaluru 560071 Karnataka
               </p>
               <p>
-                <a href="mailto:abc@example.com">abc@example.com</a>
+                <a href="mailto:help@cardio-health.in">help@cardio-health.in</a>
               </p>
               <p>
                 <a href="tel:+18475555555">1-847-555-5555</a>

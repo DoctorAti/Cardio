@@ -1,8 +1,9 @@
 import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
-import Banda from '../resources/testimonial-carousel-1.jpg';
-import Testimonial1 from '../resources/testimonial1.jpg';
+import Testimonial1 from '../resources/testimonial 1.jpg';
+import Testimonial2 from '../resources/testimonial 2.jpg';
+import Testimonial3 from '../resources/testimonial 3.jpg';
 import PropTypes from "prop-types";
 import RightArrow from '../resources/right-arrow.svg'
 
@@ -26,23 +27,17 @@ export class MyCarousel extends React.Component {
         
       },
       {
-        image: RightArrow,
-        content: 'My chacha, Mohan Amarnani (77 now) and has almost recovered. He has resumed with his usual routine. I thank Aman (the care manager) and Onco.com for the help they have provided and are still providing selflessly till date. It feels really great to have such people around who are willing to help you without any personal gains.',
-        name: "Jeet Parekh girlfriend", 
+        image: Testimonial2,
+        content: 'My grand mother (age of 89 years) suffered from chest pain. Not sure of what to do, I searched online for cardio platform and stumble upon cardio-health platform. I immediately signed up for their free call with cardiologist and he (Dr Rangrajan Shetty) advised to carry out certain test. We did certain test and submitted on the platform.Now my grand mother is feeling much better and I am loving such platform which connects with local cardiologist as well as renowned cardiologist from other cities. Thank you cardio-health team. I owe my grand mom better health to you guys. Kudos',
+        name: "Ameena Siglipilli", 
         
       },
       {
-        image: Banda,
-        content: 'My bhatija, Mohan Amarnani (77 now) and has almost recovered. He has resumed with his usual routine. I thank Aman (the care manager) and Onco.com for the help they have provided and are still providing selflessly till date. It feels really great to have such people around who are willing to help you without any personal gains.',
-        name: "gujju baba", 
+        image: Testimonial3,
+        content: 'I myself was suffering from angina and got diagnosed with coronary arterial disease. Since I was young, I felt to take specialized opinion from cardio-health platform.  The Care Manager (Anant Yadav) was very helpful. He helped connect to Dr Anish Jain which prescribed me set of medicine to reduce plaque and cholesterol. I am very happy with cardio-health.in and would rate them 10/10.',
+        name: "Lalit Patel", 
         
       },
-      {
-        image: Banda,
-        content: 'My bhanja, Mohan Amarnani (77 now) and has almost recovered. He has resumed with his usual routine. I thank Aman (the care manager) and Onco.com for the help they have provided and are still providing selflessly till date. It feels really great to have such people around who are willing to help you without any personal gains.',
-        name: "mota champ", 
-        
-      }
     ];
 
     this.state = {
