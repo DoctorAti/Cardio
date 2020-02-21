@@ -21,7 +21,7 @@ module.exports = {
           ]
         },
         {
-          test: /\.(jpe?g|png|gif|svg)$/i,
+          test: /\.(jpe?g|png|gif|svg|ico)$/i,
           loaders: [
             'file-loader?hash=sha512&digest=hex&name=[hash].[ext]'
           ]
