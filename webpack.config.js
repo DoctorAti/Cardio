@@ -1,4 +1,6 @@
 const CompressionPlugin = require('compression-webpack-plugin');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+var path = require('path');
 
 module.exports = {
     module: {
@@ -9,7 +11,15 @@ module.exports = {
           use: {
             loader: "babel-loader"
           }
-        }, 
+        },
+        {
+          test: /\.html$/,
+          use: [
+            {
+              loader: "html-loader"
+            }
+          ]
+        },
         {
           test: /\.(jpe?g|png|gif|svg)$/i,
           loaders: [
@@ -23,10 +33,20 @@ module.exports = {
       ]
       
     },
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: 'main.js'
+    },
     plugins: [
         new CompressionPlugin({
           test: /\.js(\?.*)?$/i,
           cache: true,
         }),
+        new HtmlWebPackPlugin(
+            {
+                template: './public/index.html'
+            }
+        )
       ],
   };
