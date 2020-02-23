@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import { Working } from './components/working.js';
 import { MyCarousel } from './components/testimonial.js';
-import NavigationBar from './components/navigationBar.js';
+//  import NavigationBar from './components/navigationBar.js';
 import ContactModal from './components/contactModal.js';
 import { DoctorCarousel } from './components/doctors.js';
 import Products from './components/products.js';
@@ -26,6 +26,7 @@ const WorkingVideo = lazy(() => import('./components/workingVideo'));
 // const MyCarousel = lazy(()=> import('./components/testimonial'));
 // const DoctorCarousel = lazy(()=> import('./components/doctors'));
 const Footer = lazy(() => import('./components/footer'));
+const NavigationBar = lazy(() => import('./components/navigationBar'));
 
 function initializeReactGA() {
   ReactGA.initialize('UA-158622598-1');
@@ -40,7 +41,9 @@ export default class App extends React.Component {
           <Switch>
             <div>
               <ContactModal />
-              <NavigationBar />
+              <Suspense fallback={<div>Loading....</div>}>
+                <NavigationBar />
+              </Suspense>
               <Route exact path="/">
                 <div id="introduction">
                   <Introduction />
