@@ -1,53 +1,70 @@
 import React from 'react';
 import '../App.css';
-// import { PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
+import { Link } from 'react-router-dom';
+import { PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
+// Require `PhoneNumberFormat`.
+const PNF = require('google-libphonenumber').PhoneNumberFormat;
+
+// Get an instance of `PhoneNumberUtil`.
+const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance();
+
 export default class ContactModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       name: '',
-      phoneNo: ''
+      phoneNo: '',
+      validPhoneNumber: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  };
+  }
 
-   async handleSubmit(event) {
-    const options = {
-      method: 'POST',
-      body: JSON.stringify({
-        firstName: this.state.name,
-        phoneNo: this.state.phoneNo
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      }
-    };
-    const request = new Request('https://cardio-health.in/api/getintouch/', {
-      method: 'POST',
-      body: JSON.stringify({
-        firstName: this.state.name,
-        phoneNo: this.state.phoneNo
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    const response = fetch(request)
-      .then(data => {
-        console.log('then');
-        alert(
-          'Thanks for submitting your interest. Our customer exuecutives will reach out to you shortly'
-        );
-      })
-      .catch(function () {
-        console.log('catch');
-        alert(
-          'Sorry, your request can not be submitted. Please try after refreshing the page again.'
-        );
+  async handleSubmit(event) {
+    const number = phoneUtil.parseAndKeepRawInput(this.state.phoneNo, 'IN');
+    if (phoneUtil.isValidNumber(number) === true) {
+      const options = {
+        method: 'POST',
+        body: JSON.stringify({
+          firstName: this.state.name,
+          phoneNo: this.state.phoneNo
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
+      };
+      const request = new Request('https://cardio-health.in/api/getintouch/', {
+        method: 'POST',
+        body: JSON.stringify({
+          firstName: this.state.name,
+          phoneNo: this.state.phoneNo
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
+      const response = fetch(request)
+        .then(data => {
+          console.log('then');
+          alert(
+            'Thanks for submitting your interest. Our customer exuecutives will reach out to you shortly'
+          );
+          return;
+        })
+        .catch(function() {
+          console.log('catch');
+          alert(
+            'Sorry, your request can not be submitted. Please try after refreshing the page again.'
+          );
+        });
+    } else {
+      this.setState({
+        validPhoneNumber: 'Enter a valid phone number'
+      });
+      alert('Please enter a valid phone number');
+    }
     event.preventDefault();
   }
 
@@ -65,6 +82,18 @@ export default class ContactModal extends React.Component {
       this.setState({
         phoneNo: value
       });
+      // Parse number with country code and keep raw input.
+      // console.log(this.state.phoneNo);
+      const number = phoneUtil.parseAndKeepRawInput(value, 'IN');
+      // alert("CountryCode => " + number.getCountryCode());
+      // alert("Number => " + number.getNationalNumber());
+      // alert("Possibel? " + phoneUtil.isPossibleNumber(number));
+      // alert("Valid? " + phoneUtil.isValidNumber(number));
+      if (phoneUtil.isValidNumber(number) === true) {
+        this.setState({
+          validPhoneNumber: ''
+        });
+      } else this.setState({ validPhoneNumber: 'Enter a valid Phone number' });
     }
   }
 
@@ -83,7 +112,9 @@ export default class ContactModal extends React.Component {
               </div>
               <div class="modal-body">
                 <div class="form-group">
-                  {/* <label for="recipient-name" class="col-form-label">Name:</label> */}
+                  <label for="recipient-name" class="col-form-label">
+                    Enter Name
+                  </label>
                   <input
                     value={this.state.name}
                     onChange={this.handleChange}
@@ -91,20 +122,36 @@ export default class ContactModal extends React.Component {
                     type="text"
                     class="form-control"
                     id="recipient-name"
-                    placeholder="Your Name"
+                    placeholder="Enter Name"
                   />
-                </div>
-                <div class="form-group">
-                  {/* <label for="message-text" class="col-form-label">Phone:</label> */}
-                  <input
-                    value={this.state.phoneNo}
-                    onChange={this.handleChange}
-                    name="phoneNo"
-                    type="tel"
-                    class="form-control"
-                    id="message-text"
-                    placeholder="Mobile Number"
-                  ></input>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">
+                      Mobile Number
+                    </label>
+                    <input
+                      value={this.state.phoneNo}
+                      onChange={this.handleChange}
+                      name="phoneNo"
+                      type="tel"
+                      class="form-control"
+                      id="message-text"
+                      placeholder="Mobile Number"
+                    ></input>
+                    <small id="phoneHelp" class="" style={{ color: 'red' }}>
+                      {this.state.validPhoneNumber}
+                    </small>
+                    <small id="phoneHelp" class="form-text text-muted">
+                      We'll never share your name and number with anyone else.
+                    </small>
+                    <small id="phoneHelp" class="form-text text-muted">
+                      By pressing Submit button, You agree to{' '}
+                      <href to="cardio-health.in">cardio-health.in </href>
+                      <Link to="/terms-and-conditions">
+                        Terms & Conditions{' '}
+                      </Link>
+                      and<Link to="privacy-policy"> privacy policy</Link>.
+                    </small>
+                  </div>
                 </div>
               </div>
               <div class="modal-footer">

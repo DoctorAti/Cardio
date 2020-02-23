@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import phone from '../resources/phone.png';
 import mail from '../resources/mail.png';
-import { Row, Col } from 'reactstrap';
+import { Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 class footer extends Component {
   render() {
@@ -29,15 +29,15 @@ class footer extends Component {
                     style={{ textAlign: 'center', alignItems: 'center' }}
                   >
                     <Col className="col" xs={12} sm={12} md={6} lg={6} xl={6}>
-                      <a href="tel:+18475555555">
+                      <a href="tel:+919611139579">
                         <img src={phone} width="30%" alt="logo"></img>
                       </a>
                     </Col>
                     <Col className="col" xs={12} sm={12} md={6} lg={6} xl={6}>
                       <h6>Call us at</h6>
                       <h6>
-                        <a href="tel:+18475555555" style={{ color: 'white' }}>
-                          1-847-555-5555
+                        <a href="tel:+919611139579" style={{ color: 'white' }}>
+                          +919611139579
                         </a>
                       </h6>
                     </Col>
@@ -74,9 +74,6 @@ class footer extends Component {
           className="card-body"
           style={{ backgroundColor: '#F8F9FA', color: 'black' }}
         >
-          {/* <h5 className="card-title">Special title treatment</h5>
-                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" className="btn btn-info">Go somewhere</a> */}
           <div className="row" style={{ textAlign: 'center' }}>
             <Col className="col" xs={12} sm={12} md={3} lg={3} xl={3}>
               <h5>About Cardio</h5>
@@ -99,13 +96,14 @@ class footer extends Component {
             <Col className="col" xs={12} sm={12} md={6} lg={6} xl={6}>
               <h5>Find Us</h5>
               <p>
-                Cardio-health.in, Embassy Golf Links (EGL) Off Intermediate Ring Road Bengaluru 560071 Karnataka
+                Cardio-health.in, Embassy Golf Links (EGL) Off Intermediate Ring
+                Road Bengaluru 560071 Karnataka
               </p>
               <p>
                 <a href="mailto:help@cardio-health.in">help@cardio-health.in</a>
               </p>
               <p>
-                <a href="tel:+18475555555">1-847-555-5555</a>
+                <a href="tel:+919611139579">+919611139579</a>
               </p>
             </Col>
           </div>

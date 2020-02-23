@@ -1,8 +1,10 @@
 const CompressionPlugin = require('compression-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var path = require('path');
 
 module.exports = {
+    mode: 'production',
     module: {
       rules: [
         {
@@ -14,6 +16,7 @@ module.exports = {
         },
         {
           test: /\.html$/,
+          exclude: /node_modules/,
           use: [
             {
               loader: "html-loader"
@@ -50,4 +53,11 @@ module.exports = {
             }
         )
       ],
+      optimization: {
+        minimizer: [
+          new UglifyJsPlugin({
+            exclude: /\/node_modules/,
+          }),
+        ]
+      }
   };
