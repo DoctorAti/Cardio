@@ -25,7 +25,7 @@ export default class ContactModal extends React.Component {
         'Access-Control-Allow-Origin': '*'
       }
     };
-    const request = new Request('http://104.198.205.181:8081/api/getintouch/', {
+    const request = new Request('https://cardio-health.in/api/getintouch/', {
       method: 'POST',
       body: JSON.stringify({
         firstName: this.state.name,
