@@ -1,5 +1,5 @@
-import React, { Component, lazy, Suspense } from 'react';
-// import Introduction from './components/introduction';
+import React, { lazy, Suspense } from 'react';
+import Introduction from './components/introduction';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import { Working } from './components/working.js';
@@ -13,14 +13,19 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Terms from './components/terms';
 import Services from './components/services';
-import Footer from './components/footer';
+//  import Footer from './components/footer';
 import ScrollToTop from './components/ScrollToTop';
-import WorkingVideo from './components/workingVideo';
+//  import WorkingVideo from './components/workingVideo';
 
 import ReactGA from 'react-ga';
 import Advertisment from './components/advertisment';
 
-const Introduction = lazy(() => import('./components/introduction'));
+// const Introduction = lazy(() => import('./components/introduction'));
+// const Working = lazy(()=> import('./components/working'));
+const WorkingVideo = lazy(() => import('./components/workingVideo'));
+// const MyCarousel = lazy(()=> import('./components/testimonial'));
+// const DoctorCarousel = lazy(()=> import('./components/doctors'));
+const Footer = lazy(() => import('./components/footer'));
 
 function initializeReactGA() {
   ReactGA.initialize('UA-158622598-1');
@@ -38,9 +43,7 @@ export default class App extends React.Component {
               <NavigationBar />
               <Route exact path="/">
                 <div id="introduction">
-                  <Suspense fallback={<div>Loading.....</div>}>
-                    <Introduction />
-                  </Suspense>
+                  <Introduction />
                 </div>
 
                 <div id="products">
@@ -52,6 +55,8 @@ export default class App extends React.Component {
                 <div id="working">
                   <Suspense fallback={<div>Loading.....</div>}>
                     <Working />
+                  </Suspense>
+                  <Suspense fallback={<div>Loading.....</div>}>
                     <WorkingVideo />
                   </Suspense>
                 </div>
