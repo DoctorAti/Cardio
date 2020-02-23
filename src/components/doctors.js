@@ -6,7 +6,7 @@ import cardioLogist2 from '../resources/cardiologist 2.jpeg';
 import cardioLogist3 from '../resources/cardiologist 3.jpg';
 import cardioLogist5 from '../resources/cardiologist 5.jpg';
 import PropTypes from 'prop-types';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Image from 'react-bootstrap/Image';
 import '../App.css';
 
