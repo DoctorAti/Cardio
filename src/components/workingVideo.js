@@ -1,43 +1,45 @@
 import React from 'react';
-import Iframe from 'react-iframe'
+import Iframe from 'react-iframe';
 import {
   BrowserView,
   MobileView,
   isBrowser,
   isMobile
-} from "react-device-detect";
+} from 'react-device-detect';
 
 import '../App.css';
 
 export default class WorkingVideo extends React.Component {
   render() {
-    if(isMobile){
+    if (isMobile) {
       return (
-        <div style={{textAlign: 'center'}}>
-        <Iframe url="https://www.youtube.com/embed/9emAmwJ3vFw"
-        width="100%"
-        height="450px"
-        id="myId"
-        className="myClassname"
-        display="initial"
-        allowFullScreen/>
-      </div>  
+        <div style={{ textAlign: 'center' }}>
+          <Iframe
+            url="https://www.youtube.com/embed/-idKfbnwLbg"
+            width="100%"
+            height="450px"
+            id="myId"
+            className="myClassname"
+            display="initial"
+            allowFullScreen
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div style={{ textAlign: 'center', margin: '7.5%' }}>
+          <Iframe
+            url="https://www.youtube.com/embed/-idKfbnwLbg"
+            height="400px"
+            width="600px"
+            id="myId"
+            allowFullScreen
+            className="myClassname"
+            display="initial"
+            allowFullScreen
+          />
+        </div>
       );
     }
-    else{
-      return (
-        <div style={{textAlign: 'center', margin: '7.5%'}} >
-        <Iframe url="https://www.youtube.com/embed/9emAmwJ3vFw"
-        height="400px"
-        width='600px'
-        id="myId"
-        allowFullScreen
-        className="myClassname"
-        display="initial"
-        allowFullScreen/>
-      </div>  
-      );
-    }
-    
   }
 }
