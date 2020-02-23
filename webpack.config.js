@@ -15,6 +15,7 @@ module.exports = {
         },
         {
           test: /\.html$/,
+          exclude: /node_modules/,
           use: [
             {
               loader: "html-loader"
@@ -52,6 +53,10 @@ module.exports = {
         )
       ],
       optimization: {
-        minimizer: [new UglifyJsPlugin()],
+        minimizer: [
+          new UglifyJsPlugin({
+            exclude: /\/node_modules/,
+          }),
+        ]
       }
   };
