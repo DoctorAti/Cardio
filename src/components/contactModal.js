@@ -11,9 +11,9 @@ export default class ContactModal extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  };
 
-  async handleSubmit(event) {
+   async handleSubmit(event) {
     const options = {
       method: 'POST',
       body: JSON.stringify({
