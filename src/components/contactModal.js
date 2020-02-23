@@ -144,7 +144,7 @@ export default class ContactModal extends React.Component {
                       We'll never share your name and number with anyone else.
                     </small>
                     <small id="phoneHelp" class="form-text text-muted">
-                      By pressing Submit button, I agree to{' '}
+                      By pressing Submit button, You agree to{' '}
                       <href to="cardio-health.in">cardio-health.in </href>
                       <Link to="/terms-and-conditions">
                         Terms & Conditions{' '}
