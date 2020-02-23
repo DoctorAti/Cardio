@@ -1,5 +1,6 @@
 const CompressionPlugin = require('compression-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var path = require('path');
 
 module.exports = {
@@ -50,4 +51,7 @@ module.exports = {
             }
         )
       ],
+      optimization: {
+        minimizer: [new UglifyJsPlugin()],
+      }
   };
