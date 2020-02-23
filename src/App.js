@@ -1,5 +1,5 @@
-import React from 'react';
-import Introduction from './components/introduction';
+import React, { Component, lazy, Suspense } from 'react';
+// import Introduction from './components/introduction';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import { Working } from './components/working.js';
@@ -20,7 +20,7 @@ import WorkingVideo from './components/workingVideo';
 import ReactGA from 'react-ga';
 import Advertisment from './components/advertisment';
 
-  
+const Introduction = lazy(() => import('./components/introduction'));
 
 function initializeReactGA() {
   ReactGA.initialize('UA-158622598-1');
@@ -38,7 +38,9 @@ export default class App extends React.Component {
               <NavigationBar />
               <Route exact path="/">
                 <div id="introduction">
-                  <Introduction />
+                  <Suspense fallback={<div>Loading.....</div>}>
+                    <Introduction />
+                  </Suspense>
                 </div>
 
                 <div id="products">
@@ -48,16 +50,22 @@ export default class App extends React.Component {
                   <Advertisment />
                 </div>
                 <div id="working">
-                  <Working />
-                  <WorkingVideo />
+                  <Suspense fallback={<div>Loading.....</div>}>
+                    <Working />
+                    <WorkingVideo />
+                  </Suspense>
                 </div>
 
                 <div id="testimonial">
-                  <MyCarousel />
+                  <Suspense fallback={<div>Loading.....</div>}>
+                    <MyCarousel />
+                  </Suspense>
                 </div>
 
                 <div id="ourDoctors">
-                  <DoctorCarousel />
+                  <Suspense fallback={<div>Loading.....</div>}>
+                    <DoctorCarousel />
+                  </Suspense>
                 </div>
               </Route>
               <Route exact path="/terms-and-conditions">
@@ -66,7 +74,9 @@ export default class App extends React.Component {
               <Route exact path="/privacy-policy">
                 <Services />
               </Route>
-              <Footer />
+              <Suspense fallback={<div>Loading.....</div>}>
+                <Footer />
+              </Suspense>
             </div>
           </Switch>
         </ScrollToTop>
