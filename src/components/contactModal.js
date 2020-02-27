@@ -23,10 +23,10 @@ export default class ContactModal extends React.Component {
   }
 
   async handleSubmit(event) {
-    // ReactGA.event({
-    //   category: 'Click',
-    //   action: 'Submit contact Modal'
-    // });
+    ReactGA.event({
+      category: 'Click',
+      action: 'Submit contact Modal'
+    });
     const number = phoneUtil.parseAndKeepRawInput(this.state.phoneNo, 'IN');
     if (phoneUtil.isValidNumber(number) === true) {
       const options = {
@@ -56,10 +56,10 @@ export default class ContactModal extends React.Component {
           alert(
             'Thanks for submitting your interest. Our customer exuecutives will reach out to you shortly'
           );
-          // ReactGA.event({
-          //   category: 'Click',
-          //   action: 'Successful Submit contact Modal'
-          // });
+          ReactGA.event({
+            category: 'Click',
+            action: 'Successful Submit contact Modal'
+          });
           return;
         })
         .catch(function() {
@@ -67,20 +67,20 @@ export default class ContactModal extends React.Component {
           alert(
             'Sorry, your request can not be submitted. Please try after refreshing the page again.'
           );
-          // ReactGA.event({
-          //   category: 'Click',
-          //   action: 'UnSuccessful Submit, Error, contact Modal'
-          // });
+          ReactGA.event({
+            category: 'Click',
+            action: 'UnSuccessful Submit, Error, contact Modal'
+          });
         });
     } else {
       this.setState({
         validPhoneNumber: 'Enter a valid phone number'
       });
       alert('Please enter a valid phone number');
-      // ReactGA.event({
-      //   category: 'Click',
-      //   action: 'UnSuccessful Submit, Incorrect Number, contact Modal'
-      // });
+      ReactGA.event({
+        category: 'Click',
+        action: 'UnSuccessful Submit, Incorrect Number, contact Modal'
+      });
     }
     event.preventDefault();
   }
