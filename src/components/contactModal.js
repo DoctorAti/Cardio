@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
 import { PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
+import ReactGA from 'react-ga';
 // Require `PhoneNumberFormat`.
 const PNF = require('google-libphonenumber').PhoneNumberFormat;
 
@@ -22,6 +23,10 @@ export default class ContactModal extends React.Component {
   }
 
   async handleSubmit(event) {
+    ReactGA.event({
+      category: 'Click',
+      action: 'Submit contact Modal'
+    });
     const number = phoneUtil.parseAndKeepRawInput(this.state.phoneNo, 'IN');
     if (phoneUtil.isValidNumber(number) === true) {
       const options = {
@@ -51,6 +56,10 @@ export default class ContactModal extends React.Component {
           alert(
             'Thanks for submitting your interest. Our customer exuecutives will reach out to you shortly'
           );
+          ReactGA.event({
+            category: 'Click',
+            action: 'Successful Submit contact Modal'
+          });
           return;
         })
         .catch(function() {
@@ -58,12 +67,20 @@ export default class ContactModal extends React.Component {
           alert(
             'Sorry, your request can not be submitted. Please try after refreshing the page again.'
           );
+          ReactGA.event({
+            category: 'Click',
+            action: 'UnSuccessful Submit, Error, contact Modal'
+          });
         });
     } else {
       this.setState({
         validPhoneNumber: 'Enter a valid phone number'
       });
       alert('Please enter a valid phone number');
+      ReactGA.event({
+        category: 'Click',
+        action: 'UnSuccessful Submit, Incorrect Number, contact Modal'
+      });
     }
     event.preventDefault();
   }
@@ -98,6 +115,10 @@ export default class ContactModal extends React.Component {
   }
 
   render() {
+    // ReactGA.event({
+    //   category: 'Click',
+    //   action: 'Open contact Modal'
+    // });
     return (
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -136,6 +157,7 @@ export default class ContactModal extends React.Component {
                       class="form-control"
                       id="message-text"
                       placeholder="Mobile Number"
+                      required
                     ></input>
                     <small id="phoneHelp" class="" style={{ color: 'red' }}>
                       {this.state.validPhoneNumber}

@@ -11,8 +11,15 @@ import {
   isBrowser,
   isMobile
 } from 'react-device-detect';
+import ReactGA from 'react-ga';
 
 export default class Products extends React.Component {
+  callAnayltics = () => {
+    ReactGA.event({
+      category: 'Click',
+      action: 'Get expert opinion Contact Modal'
+    });
+  };
   render() {
     return (
       <div style={{ margin: '7.5%', textAlign: 'center' }}>
@@ -109,6 +116,7 @@ export default class Products extends React.Component {
               fontFamily: '',
               borderColor: '#ababab'
             }}
+            onClick={this.callAnayltics}
           >
             <h4
               style={{ marginBottom: '0px' }}
