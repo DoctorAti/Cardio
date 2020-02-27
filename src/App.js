@@ -33,11 +33,11 @@ const NavigationBar = lazy(() => import('./components/navigationBar'));
 //     gtmId: 'GTM-NFHZMHR'
 // }
 // TagManager.initialize(tagManagerArgs)
-ReactGA.initialize('UA-159251825-1');
-ReactGA.pageview('/homepage');
 
 export default class App extends React.Component {
   render() {
+    ReactGA.initialize('UA-159251825-1');
+    ReactGA.pageview('/homepage');
     return (
       <Router>
         <ScrollToTop>
