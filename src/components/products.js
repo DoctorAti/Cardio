@@ -15,10 +15,10 @@ import ReactGA from 'react-ga';
 
 export default class Products extends React.Component {
   callAnayltics = () => {
-    // ReactGA.event({
-    //   category: 'Click',
-    //   action: 'Get expert opinion Contact Modal'
-    // });
+    ReactGA.event({
+      category: 'Click',
+      action: 'Get expert opinion Contact Modal'
+    });
     console.log('inside call analytics');
   };
   render() {
