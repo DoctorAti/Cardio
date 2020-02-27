@@ -115,10 +115,6 @@ export default class ContactModal extends React.Component {
   }
 
   render() {
-    // ReactGA.event({
-    //   category: 'Click',
-    //   action: 'Open contact Modal'
-    // });
     return (
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
