@@ -18,10 +18,10 @@ export class DoctorCarousel extends React.Component {
     this.comments = [
       {
         image: cardioLogist1,
-        name: 'Dr. Rangrajan Shetty',
+        name: 'Dr. Venkatraman Aiyer',
         work: 'Cardio Thoracic Surgeon',
         experience: '28 years experience',
-        degree: 'MBBS | MD | DNB'
+        degree: 'MBBS | MS | M.Ch'
       },
       {
         image: cardioLogist2,
@@ -35,7 +35,7 @@ export class DoctorCarousel extends React.Component {
         name: 'Dr. Mohsin Abdullah Khan',
         work: 'Senior Cardiac Surgeon',
         experience: '14 years experience',
-        degree: 'MBBS | MD | DNB | PDCC'
+        degree: 'MBBS | MS | M.ch'
       },
       {
         image: cardioLogist5,

@@ -28,7 +28,7 @@ export class MyCarousel extends React.Component {
       },
       {
         image: Testimonial2,
-        content: 'My grand mother (age of 89 years) suffered from chest pain. Not sure of what to do, I searched online for cardio platform and stumble upon cardio-health platform. I immediately signed up for their free call with cardiologist and he (Dr Rangrajan Shetty) advised to carry out certain test. We did certain test and submitted on the platform.Now my grand mother is feeling much better and I am loving such platform which connects with local cardiologist as well as renowned cardiologist from other cities. Thank you cardio-health team. I owe my grand mom better health to you guys. Kudos',
+        content: 'My grand mother (age of 89 years) suffered from chest pain. Not sure of what to do, I searched online for cardio platform and stumble upon cardio-health platform. I immediately signed up for their free call with cardiologist and he (Dr Venkatraman Aiyar) advised to carry out certain test. We did certain test and submitted on the platform.Now my grand mother is feeling much better and I am loving such platform which connects with local cardiologist as well as renowned cardiologist from other cities. Thank you cardio-health team. I owe my grand mom better health to you guys. Kudos',
         name: "Ameena Siglipilli", 
         
       },
