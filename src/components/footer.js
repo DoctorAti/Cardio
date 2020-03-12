@@ -29,15 +29,15 @@ class footer extends Component {
                     style={{ textAlign: 'center', alignItems: 'center' }}
                   >
                     <Col className="col" xs={12} sm={12} md={6} lg={6} xl={6}>
-                      <a href="tel:+919611139579">
+                      <a href="tel:+919008077579">
                         <img src={phone} width="30%" alt="logo"></img>
                       </a>
                     </Col>
                     <Col className="col" xs={12} sm={12} md={6} lg={6} xl={6}>
                       <h6>Call us at</h6>
                       <h6>
-                        <a href="tel:+919611139579" style={{ color: 'white' }}>
-                          +919611139579
+                        <a href="tel:+919008077579" style={{ color: 'white' }}>
+                          +919008077579
                         </a>
                       </h6>
                     </Col>
@@ -103,7 +103,7 @@ class footer extends Component {
                 <a href="mailto:help@cardio-health.in">help@cardio-health.in</a>
               </p>
               <p>
-                <a href="tel:+919611139579">+919611139579</a>
+                <a href="tel:+919008077579">+919008077579</a>
               </p>
             </Col>
           </div>

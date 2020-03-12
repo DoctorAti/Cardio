@@ -18,6 +18,7 @@ import ScrollToTop from './components/ScrollToTop';
 //  import WorkingVideo from './components/workingVideo';
 
 import ReactGA from 'react-ga';
+// import TagManager from 'react-gtm-module'
 import Advertisment from './components/advertisment';
 
 // const Introduction = lazy(() => import('./components/introduction'));
@@ -28,13 +29,15 @@ const WorkingVideo = lazy(() => import('./components/workingVideo'));
 const Footer = lazy(() => import('./components/footer'));
 const NavigationBar = lazy(() => import('./components/navigationBar'));
 
-function initializeReactGA() {
-  ReactGA.initialize('UA-158622598-1');
-  ReactGA.pageview('/homepage');
-}
+// const tagManagerArgs = {
+//     gtmId: 'GTM-NFHZMHR'
+// }
+// TagManager.initialize(tagManagerArgs)
 
 export default class App extends React.Component {
   render() {
+    ReactGA.initialize('UA-159251825-1');
+    ReactGA.pageview('/homepage');
     return (
       <Router>
         <ScrollToTop>
