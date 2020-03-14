@@ -4,40 +4,40 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import { Working } from './components/working.js';
 import { MyCarousel } from './components/testimonial.js';
-//  import NavigationBar from './components/navigationBar.js';
 import ContactModal from './components/contactModal.js';
 import { DoctorCarousel } from './components/doctors.js';
 import Products from './components/products.js';
+import ReactPixel from 'react-facebook-pixel';
+
+
 
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Terms from './components/terms';
 import Services from './components/services';
-//  import Footer from './components/footer';
 import ScrollToTop from './components/ScrollToTop';
-//  import WorkingVideo from './components/workingVideo';
 
 import ReactGA from 'react-ga';
-// import TagManager from 'react-gtm-module'
 import Advertisment from './components/advertisment';
 
-// const Introduction = lazy(() => import('./components/introduction'));
-// const Working = lazy(()=> import('./components/working'));
 const WorkingVideo = lazy(() => import('./components/workingVideo'));
-// const MyCarousel = lazy(()=> import('./components/testimonial'));
-// const DoctorCarousel = lazy(()=> import('./components/doctors'));
 const Footer = lazy(() => import('./components/footer'));
 const NavigationBar = lazy(() => import('./components/navigationBar'));
 
-// const tagManagerArgs = {
-//     gtmId: 'GTM-NFHZMHR'
-// }
-// TagManager.initialize(tagManagerArgs)
 
 export default class App extends React.Component {
   render() {
     ReactGA.initialize('UA-159251825-1');
     ReactGA.pageview('/homepage');
+
+    const pixelOptions = {
+      autoConfig: true, // set pixel's autoConfig
+      debug: false, // enable logs
+    };
+
+    ReactPixel.init('576495169636727', pixelOptions);
+    ReactPixel.pageView(); // For tracking page view
+
     return (
       <Router>
         <ScrollToTop>
