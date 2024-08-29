@@ -1,0 +1,41 @@
+SELECT
+    ord.id AS order_id,
+    ord_item.type_code AS item_type_code,
+    ord_item.product_name AS item_name,
+    ord.customer_id AS customer_id,
+    cust.name AS customer_name,
+    cust.email AS customer_email,
+    logistics.modified_date AS dispatch_time,
+    ord.expected_delivery_date AS expected_dispatch_time,
+    logistics.tracking_number AS tracking_number,
+    logistics.status AS shipping_status,
+    inv.stock_level AS current_stock_level,
+    inv.restock_date AS next_restock_date
+FROM
+    orders.order_items AS ord_item
+JOIN
+    orders.order_details AS ord
+    ON ord.id = ord_item.order_id
+JOIN
+    logistics.logistics_data AS logistics
+    ON ord_item.order_id = logistics.order_id
+JOIN
+    customers.customer_info AS cust
+    ON ord.customer_id = cust.id
+JOIN
+    inventory.product_inventory AS inv
+    ON ord_item.product_id = inv.product_id
+WHERE
+    logistics.modified_date > ord.expected_delivery_date + INTERVAL '90 DAYS'
+    AND logistics.product_id = ord_item.product_id
+    AND inv.stock_level < 100 -- Additional condition for low stock
+    AND inv.restock_date < CURRENT_DATE + INTERVAL '30 DAYS' -- Restock soon
+    AND ord.part_creation_date IS NOT NULL
+    AND ord_item.part_creation_date IS NOT NULL
+    AND logistics.part_creation_date IS NOT NULL
+    AND cust.status = 'Active' -- Only active customers
+    AND logistics.status NOT IN ('Delivered', 'Cancelled') -- Exclude delivered or cancelled shipments
+ORDER BY
+    ord.expected_delivery_date DESC,
+    logistics.modified_date DESC
+LIMIT 100;
