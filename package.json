@@ -24,7 +24,7 @@
     "react-lazy-load-image-component": "^1.4.1",
     "react-responsive-image": "^5.0.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
+    "react-scripts": "5.0.1",
     "reactjs-popup": "^1.5.0",
     "reactstrap": "^8.2.0",
     "typescript": "^3.8.3"
@@ -82,6 +82,6 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^5.2.2"
   }
 }
